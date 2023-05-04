@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Crete+Round&family=Dosis:wght@200;300&family=M+PLUS+Rounded+1c:wght@800;900&family=Staatliches&family=Varela+Round&display=swap" rel="stylesheet">
+	<title>SW 2</title>
+</head>
+<body style="background-color:lavenderblush;">
+	<style type="text/css">
+		body{
+			text-align: center;
+			text-size-adjust: 30px;
+			font-family: 'M PLUS Rounded 1c', sans-serif;
+		}
+
+	</style>
+
+
+<h1 style="font-family: 'M PLUS Rounded 1c', sans-serif;">Fahrenheit to Celsius Converter</h1>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+
+<div>
+<p id="today" style="font-family: 'M PLUS Rounded 1c', sans-serif;"></p>
+
+<script>
+	const date = new Date();
+	document.getElementById("today").innerHTML = date;
+</script>
+</div>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Celsius(°C)</th>
+      <th scope="col">Fahrenheit(℉)</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-273.15</th>
+      <td>-459.67</td>
+      <td>Absolute zero temperature</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>32.0</td>
+      <td>Freezing/melting point of water</td>
+    </tr>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Celsius(°C)</th>
+      <th scope="col">Fahrenheit(℉)</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-273.15</th>
+      <td>-459.67</td>
+      <td>Absolute zero temperature</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>32.0</td>
+      <td>Freezing/melting point of water</td>
+    </tr>
+</body>
+</html>
